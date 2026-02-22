@@ -1,0 +1,328 @@
+/* ============================================================
+   LAYOUT — header · hero · секции · гриды · about · contacts · footer
+   ============================================================ */
+
+
+/* ===== HEADER ===== */
+.header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(10px);
+  background:rgba(11,13,16,.72);
+  border-bottom:1px solid var(--stroke);
+  transition:height .22s ease, backdrop-filter .22s ease, background .22s ease;
+}
+
+.header--scrolled{
+  backdrop-filter:blur(14px);
+  background:rgba(11,13,16,.86);
+}
+
+.header__inner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+/* ----- Brand (logo + name) ----- */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  height:72px;
+  text-decoration:none;
+  outline:none;
+}
+
+.brand:focus{outline:none}
+
+.brand:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 2px rgba(255,120,0,.4);
+  border-radius:12px;
+}
+
+.brand__logo{
+  height:clamp(28px,4.2vw,44px);
+  width:auto;
+  object-fit:contain;
+}
+
+.brand__name{
+  font-family:'Michroma',sans-serif;
+  font-size:18px;
+  letter-spacing:.12em;
+  color:rgba(255,255,255,.92);
+  line-height:1;
+  white-space:nowrap;
+  transform:translateY(1px);
+}
+
+/* ----- Nav ----- */
+.nav{
+  display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.nav__link{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  padding:10px;
+  border-radius:12px;
+  transition:.15s ease;
+}
+
+.nav__link:hover{
+  color:var(--text);
+  background:rgba(255,255,255,.06);
+}
+
+
+/* ===== HERO ===== */
+.hero{
+  padding-top:56px;
+  position:relative;
+}
+
+/* Glow убран из hero — живёт в body::after (см. ниже) */
+
+.hero__grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+  align-items:center;
+}
+
+.hero__actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+/* ----- Visual card (PNG + glow) ----- */
+.visual-card{
+  position:relative;
+  min-height:360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+.visual-card__img{
+  position:relative;
+  width:clamp(260px,32vw,460px);
+  height:auto;
+  pointer-events:none;
+  z-index:2;
+}
+
+.visual-card__glow{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  width:420px;
+  height:420px;
+  background:
+    radial-gradient(circle,
+      rgba(255,90,0,.22) 0%,
+      rgba(255,90,0,.12) 35%,
+      transparent 70%);
+  filter:blur(40px);
+  z-index:1;
+  pointer-events:none;
+  will-change:transform;
+}
+
+
+/* ===== СЕКЦИИ ===== */
+.section{padding:36px 0}
+.section--footer{padding-bottom:36px}
+
+.section__head{
+  margin-bottom:22px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+
+/* ===== ГРИДЫ ===== */
+.grid{display:grid;gap:14px}
+.grid--cards{grid-template-columns:repeat(4,1fr)}
+.grid--cases{grid-template-columns:repeat(3,1fr)}
+
+
+/* ===== ABOUT ===== */
+.about__grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:start;
+}
+
+.about__text{
+  margin:0;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.about__list{
+  margin:0;
+  padding-left:18px;
+  color:rgba(255,255,255,.82);
+}
+
+.about__list li{margin:8px 0}
+
+
+/* ===== CONTACTS ===== */
+.contacts{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+
+/* ===== FOOTER ===== */
+.footer{margin-top:26px}
+
+.footer__line{
+  height:1px;
+  background:rgba(255,255,255,.10);
+  margin:18px 0;
+}
+
+.footer__bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.to-top{color:var(--muted);text-decoration:none}
+.to-top:hover{color:var(--text)}
+
+
+/* ============================================================
+   RESPONSIVE — LAYOUT
+   ============================================================ */
+
+@media (max-width:980px){
+
+  /* Header */
+  .nav{display:none}
+
+  .header__inner{height:64px}
+
+  .brand{gap:10px}
+
+  .brand__logo{height:32px}
+
+  .brand__name{
+    font-size:16px;
+    letter-spacing:.12em;
+  }
+
+  /* Container */
+  .container{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  /* Hero */
+  .hero{padding-top:24px}
+
+  .hero__grid{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .hero__visual{
+    order:-1;
+    margin-top:4px;
+  }
+
+  .visual-card{
+    min-height:240px;
+    padding:10px 0;
+  }
+
+  .visual-card__img{
+    width:74vw;
+    max-width:340px;
+  }
+
+  .hero__actions{
+    gap:14px;
+    margin-top:6px;
+  }
+
+  /* Sections */
+  .section{padding:40px 0}
+  .section__head{margin-bottom:16px}
+
+  /* Grids */
+  .grid--cards{grid-template-columns:repeat(2,1fr)}
+  .grid--cases{grid-template-columns:1fr}
+
+  /* About & Contacts */
+  .about__grid{grid-template-columns:1fr}
+  .contacts{grid-template-columns:1fr}
+}
+
+@media (max-width:768px){
+
+  /* Hero — перестраиваем под мобиль */
+  .hero__grid{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    align-items:center;
+  }
+
+  .hero__visual{
+    order:-1;
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+
+  .visual-card{
+    min-height:auto;
+    padding:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+
+  .visual-card__img{
+    width:80vw;
+    max-width:340px;
+  }
+
+  /* На мобиле карточечный glow выключаем — работает body::after */
+  .visual-card__glow{display:none}
+
+  .hero__content{width:100%}
+}
+
+@media (max-width:360px){
+  .hero__actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .hero__actions .btn{width:100%}
+}

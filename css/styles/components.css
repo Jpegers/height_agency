@@ -1,0 +1,190 @@
+/* ============================================================
+   COMPONENTS — btn · card · case · pill · step · contact · toast
+   ============================================================ */
+
+
+/* ===== BTN ===== */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  height:44px;
+  padding:0 16px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  text-decoration:none;
+  color:var(--text);
+  background:rgba(255,255,255,.06);
+  transition:.12s ease;
+  will-change:transform;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.18);
+}
+
+.btn--primary{
+  border:0;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  box-shadow:0 12px 32px rgba(255,90,0,.25);
+}
+
+.btn--ghost{background:transparent}
+
+.btn--tg{
+  border:0;
+  background:linear-gradient(90deg,rgba(255,60,0,.85),rgba(255,138,0,.85));
+}
+
+@media (max-width:980px){
+  .btn{height:46px;padding:0 18px}
+  .btn--tg{height:40px;padding:0 14px}
+}
+
+
+/* ===== CARD (услуги) ===== */
+.card{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  padding:18px;
+  min-height:140px;
+}
+
+.card__title{margin:0 0 10px;font-size:16px}
+.card__text{margin:0;color:var(--muted);line-height:1.55}
+
+
+/* ===== CASE (кейсы) ===== */
+.case{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  overflow:hidden;
+}
+
+.case__media{
+  aspect-ratio:16/10;
+  background:rgba(255,255,255,.03);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.case__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.case__body{padding:16px 16px 18px}
+
+.case__title{margin:0 0 8px;font-size:16px}
+.case__text{margin:0 0 12px;color:var(--muted);line-height:1.55}
+
+.case__meta{display:flex;gap:8px;flex-wrap:wrap}
+
+
+/* ===== PILL ===== */
+.pill{
+  font-size:12px;
+  color:rgba(255,255,255,.82);
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.05);
+  padding:6px 10px;
+  border-radius:999px;
+}
+
+
+/* ===== STEP (как работаем) ===== */
+.steps{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.step{
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  padding:18px;
+  display:flex;
+  gap:14px;
+  min-height:150px;
+}
+
+.step__num{
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.14em;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.step__title{margin:0 0 8px;font-size:16px}
+.step__text{margin:0;color:var(--muted);line-height:1.55}
+
+@media (max-width:980px){
+  .steps{grid-template-columns:1fr}
+}
+
+
+/* ===== CONTACT ===== */
+.contact{
+  text-decoration:none;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  padding:16px;
+  transition:.12s ease;
+}
+
+.contact:hover{
+  transform:translateY(-1px);
+  border-color:rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);
+}
+
+.contact__label{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:8px;
+}
+
+.contact__value{
+  display:block;
+  font-size:14px;
+  color:rgba(255,255,255,.88);
+}
+
+
+/* ===== COPY TOAST ===== */
+.copy-toast{
+  position:fixed;
+  left:50%;
+  bottom:28px;
+  transform:translateX(-50%) translateY(12px);
+  background:rgba(18,18,18,.88);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:12px;
+  font-size:14px;
+  opacity:0;
+  pointer-events:none;
+  transition:.22s ease;
+  z-index:999;
+}
+
+.copy-toast--show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}

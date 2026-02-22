@@ -3,272 +3,596 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HEIGHT AGENCY</title>
-  <meta name="description" content="Трейд-маркетинг, мерчендайзинг, консультанты в ТТ, производство POSM." />
+  <title>HEIGHT AGENCY — Агентство интегрированных коммуникаций</title>
+  <meta name="description" content="Рост продаж и контроль представленности брендов в retail. Мерчандайзинг, трейд-маркетинг, производство POSM, полевые команды." />
   <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/additions.css" />
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="/assets/favicon.svg">
 </head>
 
 <body>
-<!-- Header -->
-    <header class="header" id="top">
-    <div class="container header__inner">
 
-        <a class="brand" href="#top">
-            <img class="brand__logo" src="assets/logo.svg" alt="HEIGHT AGENCY"> 
+<!-- =================== HEADER =================== -->
+<header class="header" id="top">
+  <div class="container header__inner">
+
+    <a class="brand" href="#top">
+      <img class="brand__logo" src="assets/logo.svg" alt="HEIGHT AGENCY" />
+    </a>
+
+    <nav class="nav" aria-label="Навигация">
+      <a class="nav__link" href="#about">О нас</a>
+      <a class="nav__link" href="#services">Решения</a>
+      <a class="nav__link" href="#analytics">Аналитика</a>
+      <a class="nav__link" href="#cases">Кейсы</a>
+      <a class="nav__link" href="#production">Производство</a>
+      <a class="nav__link" href="#contacts">Контакты</a>
+    </nav>
+
+    <a class="btn btn--tg" id="tgHeader" href="#" target="_blank" rel="noopener">
+      Telegram
+    </a>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- =================== 1. HERO =================== -->
+<section class="section hero" id="hero">
+  <div class="container hero__grid">
+
+    <!-- LEFT -->
+    <div class="hero__content">
+      <h1 class="h1">Рост&nbsp;продаж&nbsp;и&nbsp;контроль представленности брендов в&nbsp;retail</h1>
+
+      <p class="lead">
+        От стратегии и продвижения до производства и&nbsp;полевой&nbsp;реализации&nbsp;проектов.
+      </p>
+
+      <!-- Факты -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat__num">25 000+</span>
+          <span class="hero-stat__label">торговых точек</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">7 000+</span>
+          <span class="hero-stat__label">сотрудников</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">250+</span>
+          <span class="hero-stat__label">городов</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">3</span>
+          <span class="hero-stat__label">офиса</span>
+        </div>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" id="tgHero" href="#" target="_blank" rel="noopener">
+          Обсудить проект в Telegram
         </a>
-
-
-        <nav class="nav" aria-label="Навигация">
-        <a class="nav__link" href="#services">Услуги</a>
-        <a class="nav__link" href="#cases">Кейсы</a>
-        <a class="nav__link" href="#process">Процесс</a>
-        <a class="nav__link" href="#about">О компании</a>
-        <a class="nav__link" href="#contacts">Контакты</a>
-        </nav>
-
-        <a class="btn btn--tg" id="tgHeader" href="#" target="_blank" rel="noopener">
-        Telegram
+        <a class="btn btn--ghost" href="#cases">
+          Смотреть кейсы
         </a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero__visual">
+      <div class="visual-card" id="heroVisual">
+        <div class="visual-card__glow parallax-glow"></div>
+        <img
+          class="visual-card__img parallax-object"
+          src="./assets/hero.png"
+          alt=""
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =================== 2. ЗАДАЧИ =================== -->
+<section class="section tasks-section" id="tasks">
+  <div class="container">
+    <div class="section__head tasks-section__head">
+      <div>
+        <h2 class="h2">Какие задачи мы решаем</h2>
+        <p class="tasks-lead">Подключаем ресурсы, технологии и полевые команды  для достижения измеримых бизнес-результатов.</p>
+      </div>
+    </div>
+
+    <div class="tasks-cards">
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <h3 class="task-card__title">Рост доли полки</h3>
+        <p class="task-card__text">Увеличиваем присутствие бренда на полке, контролируем выкладку и стандарты представленности в каждой торговой точке.</p>
+      </div>
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3 class="task-card__title">Запуск новых SKU</h3>
+        <p class="task-card__text">Обеспечиваем вывод новинок в розницу: от расстановки приоритетов по сетям до контроля ввода и мониторинга остатков.</p>
+      </div>
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3 class="task-card__title">Контроль стандартов</h3>
+        <p class="task-card__text">SFA-система и фото-распознавание фиксируют соблюдение брендовых стандартов в режиме реального времени по всей сети.</p>
+      </div>
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        </div>
+        <h3 class="task-card__title">Снижение OOS</h3>
+        <p class="task-card__text">Выявляем out-of-stock до потери продаж: аналитика остатков, оперативное реагирование полевых команд, онлайн-отчётность.</p>
+      </div>
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="task-card__title">Федеральный запуск</h3>
+        <p class="task-card__text">Масштабируем проекты на 250+ городов одновременно: собственные команды без субподрядчиков, единые стандарты и сроки.</p>
+      </div>
+
+      <div class="task-card">
+        <div class="task-card__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <h3 class="task-card__title">Продвижение в ритейл</h3>
+        <p class="task-card__text">Промоакции, мотивационные программы, брендинг точек продаж — полный цикл от разработки концепции до реализации в сетях.</p>
+      </div>
 
     </div>
-    </header>
+  </div>
+</section>
 
 
-  <main>
+<!-- =================== 3. НАМ ДОВЕРЯЮТ =================== -->
+<section class="section clients-section" id="clients">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Нам доверяют</h2>
+      <p class="muted section__head-sub">Работаем с крупнейшими брендами FMCG и retail.</p>
+    </div>
+  </div>
 
-    <!-- 1) Hero -->
-    <section class="section hero" id="hero">
-      <div class="container hero__grid">
+  <!-- Бегущая строка — вне container, на всю ширину -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <!-- дублируем для бесшовного loop -->
+      <span class="marquee-item">Русагро</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">PepsiCo</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Балтика</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Doshirak</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Makfa</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Perfetti Van&nbsp;Melle</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Nestlé</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Beluga</span>
+      <span class="marquee-dot"></span>
+      <!-- duplicate -->
+      <span class="marquee-item">Русагро</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">PepsiCo</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Балтика</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Doshirak</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Makfa</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Perfetti Van&nbsp;Melle</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Nestlé</span>
+      <span class="marquee-dot"></span>
+      <span class="marquee-item">Beluga</span>
+      <span class="marquee-dot"></span>
+    </div>
+  </div>
+</section>
 
-        <!-- LEFT -->
-        <div class="hero__content">
-          <h1 class="h1">HEIGHT AGENCY</h1>
 
-          <p class="lead">
-            Трейд-маркетинг, мерчендайзинг, консультанты в торговых точках
-            и производство POSM — под задачи бренда и продажи.
-          </p>
+<!-- =================== 4. РЕШЕНИЯ =================== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Решения</h2>
+    </div>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" id="tgHero" href="#" target="_blank" rel="noopener">
-              Написать в Telegram
-            </a>
+    <div class="grid grid--cards">
+      <article class="card">
+        <h3 class="card__title">Мерчандайзинг</h3>
+        <p class="card__text">Контроль представленности товара, аналитика продаж, рост доли полки.</p>
+      </article>
 
-            <a class="btn btn--ghost" href="#services">
-              Смотреть услуги
-            </a>
+      <article class="card">
+        <h3 class="card__title">Ритейл-маркетинг</h3>
+        <p class="card__text">Продвижение брендов внутри торговых сетей, рост продаж.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Трейд-маркетинг</h3>
+        <p class="card__text">Промоакции и мотивационные программы для команд и партнёров.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Аутсорсинг команд</h3>
+        <p class="card__text">Полевые команды под ключ: подбор, обучение, управление, контроль KPI.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- =================== 5. КАК МЫ РАБОТАЕМ =================== -->
+<section class="section" id="process">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Как мы работаем</h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <div class="step__num">01</div>
+        <div class="step__content">
+          <h3 class="step__title">Анализ задачи</h3>
+          <p class="step__text">Изучаем цели, контекст, ограничения и KPI проекта.</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__num">02</div>
+        <div class="step__content">
+          <h3 class="step__title">Стратегия</h3>
+          <p class="step__text">Разрабатываем план, подбираем команду и форматы отчётности.</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__num">03</div>
+        <div class="step__content">
+          <h3 class="step__title">Производство и запуск</h3>
+          <p class="step__text">Производим материалы, запускаем полевые команды, контролируем качество.</p>
+        </div>
+      </li>
+
+      <li class="step">
+        <div class="step__num">04</div>
+        <div class="step__content">
+          <h3 class="step__title">Контроль через SFA</h3>
+          <p class="step__text">Онлайн-мониторинг, фото-распознавание, прозрачная аналитика в реальном времени.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- =================== 6. КОНТРОЛЬ И АНАЛИТИКА =================== -->
+<section class="section" id="analytics">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Контроль и аналитика</h2>
+    </div>
+
+    <div class="analytics-grid">
+      <div class="analytics-info">
+        <p class="about__text">
+          Собственная SFA-система с фото-распознаванием позволяет отслеживать выполнение стандартов
+          в режиме реального времени. Онлайн-отчётность и аналитика продаж снижают человеческий фактор
+          и делают KPI прозрачными для клиента на каждом этапе.
+        </p>
+      </div>
+
+      <div class="analytics-tools">
+        <div class="tool-item">
+          <span class="tool-item__icon">⬡</span>
+          <div>
+            <strong>SFA-система</strong>
+            <p>Контроль полевых команд и задач в одном окне</p>
           </div>
         </div>
-
-        <!-- RIGHT -->
-        <div class="hero__visual">
-          <div class="visual-card" id="heroVisual">
-            <div class="visual-card__glow parallax-glow"></div>
-
-            <img
-              class="visual-card__img parallax-object"
-              src="./assets/hero.png"
-              alt=""
-              loading="eager"
-              decoding="async"
-            />
+        <div class="tool-item">
+          <span class="tool-item__icon">⬡</span>
+          <div>
+            <strong>Фото-распознавание</strong>
+            <p>Автоматическая проверка выкладки и стандартов</p>
           </div>
         </div>
-
-      </div>
-    </section>
-
-    <!-- 2) Услуги -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Услуги</h2>
-        </div>
-
-        <div class="grid grid--cards" id="servicesGrid">
-          <article class="card">
-            <h3 class="card__title">Мерчендайзинг</h3>
-            <p class="card__text">Контроль выкладки, стандарты, фотоотчёт, рост продаж.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Консультанты</h3>
-            <p class="card__text">Подбор, обучение и управление персоналом в ТТ.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Производство конструкций</h3>
-            <p class="card__text">POSM/конструкции под бренд: от макета до монтажа.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Аудит торговых точек</h3>
-            <p class="card__text">Проверки, чек-листы, аналитика и рекомендации.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3) Кейсы -->
-    <section class="section" id="cases">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Кейсы</h2>
-        </div>
-
-        <div class="grid grid--cases">
-          <article class="case">
-            <div class="case__media">
-              <img src="./assets/cases/case-1.jpg" alt="" loading="lazy" />
-            </div>
-            <div class="case__body">
-              <h3 class="case__title">Кейс №1</h3>
-              <p class="case__text">Короткое описание результата и роли агентства.</p>
-              <div class="case__meta">
-                <span class="pill">Трейд-маркетинг</span>
-                <span class="pill">Ритейл</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="case">
-            <div class="case__media">
-              <img src="./assets/cases/case-2.jpg" alt="" loading="lazy" />
-            </div>
-            <div class="case__body">
-              <h3 class="case__title">Кейс №2</h3>
-              <p class="case__text">Что сделали → что получили (в 1–2 строки).</p>
-              <div class="case__meta">
-                <span class="pill">Мерчендайзинг</span>
-                <span class="pill">Сеть</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="case">
-            <div class="case__media">
-              <img src="./assets/cases/case-3.jpg" alt="" loading="lazy" />
-            </div>
-            <div class="case__body">
-              <h3 class="case__title">Кейс №3</h3>
-              <p class="case__text">Нейтральная заглушка под будущие материалы.</p>
-              <div class="case__meta">
-                <span class="pill">POSM</span>
-                <span class="pill">Производство</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4) Процесс -->
-    <section class="section" id="process">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Процесс работы</h2>
-        </div>
-
-        <ol class="steps">
-          <li class="step">
-            <div class="step__num">01</div>
-            <div class="step__content">
-              <h3 class="step__title">Бриф</h3>
-              <p class="step__text">Понимаем цель, контекст, ограничения и KPI.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step__num">02</div>
-            <div class="step__content">
-              <h3 class="step__title">План</h3>
-              <p class="step__text">Составляем план работ, сроки и формат отчётности.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step__num">03</div>
-            <div class="step__content">
-              <h3 class="step__title">Запуск</h3>
-              <p class="step__text">Запускаем команду/процессы, контролируем качество.</p>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step__num">04</div>
-            <div class="step__content">
-              <h3 class="step__title">Отчет</h3>
-              <p class="step__text">Фиксируем результат, метрики и следующие шаги.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- 5) О компании -->
-    <section class="section" id="about">
-      <div class="container about">
-        <div class="section__head">
-          <h2 class="h2">О компании</h2>
-        </div>
-
-        <div class="about__grid">
-          <p class="about__text">
-            HEIGHT AGENCY — рекламное агентство с фокусом на полевых продажах и операционном качестве в ритейле.
-          </p>
-
-          <ul class="about__list">
-            <li>Трейд-маркетинг</li>
-            <li>Мерчендайзинг</li>
-            <li>Консультанты в торговых точках</li>
-            <li>Производство конструкций / POSM</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6) Контакты -->
-    <section class="section section--footer" id="contacts">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Контакты</h2>
-        </div>
-
-        <div class="contacts">
-          <a class="contact" id="phoneLink" href="#">
-            <span class="contact__label">Телефон</span>
-            <span class="contact__value" id="phoneText">+7 (000) 000-00-00</span>
-          </a>
-
-          <a class="contact" id="emailLink" href="#">
-            <span class="contact__label">Email</span>
-            <span class="contact__value" id="emailText">hello@height-agency.ru</span>
-          </a>
-
-          <a class="contact" id="tgLink" href="#" target="_blank" rel="noopener">
-            <span class="contact__label">Telegram</span>
-            <span class="contact__value" id="tgText">@heightagency</span>
-          </a>
-
-          <a class="contact" id="siteLink" href="http://svetlankaks.ru/" target="_blank" rel="noopener">
-            <span class="contact__label">Визитка</span>
-            <span class="contact__value">Директор по работе с клиентами</span>
-          </a>
-        </div>
-
-        <footer class="footer">
-          <div class="footer__line"></div>
-          <div class="footer__bottom">
-            <span class="muted">© <span id="year"></span> HEIGHT AGENCY</span>
-            <a class="to-top" href="#top">Наверх ↑</a>
+        <div class="tool-item">
+          <span class="tool-item__icon">⬡</span>
+          <div>
+            <strong>Онлайн-отчётность</strong>
+            <p>Прозрачные KPI, доступные клиенту в любой момент</p>
           </div>
-        </footer>
+        </div>
+        <div class="tool-item">
+          <span class="tool-item__icon">⬡</span>
+          <div>
+            <strong>Аналитика продаж</strong>
+            <p>Данные для принятия решений по ассортименту и полке</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  </main>
 
-  <script src="./js/app.js"></script>
+<!-- =================== 7. ГЕОГРАФИЯ =================== -->
+<section class="section" id="geography">
+  <div class="container">
+    <div class="geo-banner">
+      <div class="geo-stat">
+        <span class="geo-stat__num">25 000+</span>
+        <span class="geo-stat__label">торговых точек</span>
+      </div>
+      <div class="geo-divider"></div>
+      <div class="geo-stat">
+        <span class="geo-stat__num">3 000+</span>
+        <span class="geo-stat__label">мерчандайзеров</span>
+      </div>
+      <div class="geo-divider"></div>
+      <div class="geo-stat">
+        <span class="geo-stat__num">70+</span>
+        <span class="geo-stat__label">супервайзеров</span>
+      </div>
+      <div class="geo-divider"></div>
+      <div class="geo-stat">
+        <span class="geo-stat__num">250+</span>
+        <span class="geo-stat__label">городов России</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =================== 8. КЕЙСЫ =================== -->
+<section class="section" id="cases">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Кейсы</h2>
+    </div>
+
+    <div class="grid grid--cases">
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-1.jpg" alt="LAB Industries" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">LAB Industries</h3>
+          <p class="case__text">Обеспечение представленности и выполнения стандартов выкладки на уровне KPI&nbsp;&gt;98%.</p>
+          <div class="case__meta">
+            <span class="pill">KPI &gt;98%</span>
+            <span class="pill">Мерчандайзинг</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-2.jpg" alt="Doshirak" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">Doshirak</h3>
+          <p class="case__text">Федеральное покрытие торговых сетей: полевые команды, контроль стандартов, онлайн-аналитика.</p>
+          <div class="case__meta">
+            <span class="pill">Федеральное покрытие</span>
+            <span class="pill">Аутсорсинг</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-3.jpg" alt="Perfetti Van Melle" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">Perfetti Van Melle</h3>
+          <p class="case__text">Рост доли полки и выполнение стандартов представленности на уровне KPI&nbsp;&gt;95%.</p>
+          <div class="case__meta">
+            <span class="pill">KPI &gt;95%</span>
+            <span class="pill">Ритейл-маркетинг</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-4.jpg" alt="Makfa" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">Makfa</h3>
+          <p class="case__text">Трейд-маркетинговые кампании: промоакции, мотивационные программы, контроль выполнения.</p>
+          <div class="case__meta">
+            <span class="pill">Трейд-маркетинг</span>
+            <span class="pill">Промо</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-5.jpg" alt="Перекрёсток" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">Перекрёсток</h3>
+          <p class="case__text">Производство и монтаж 150 брендированных объектов в магазинах сети по всей России.</p>
+          <div class="case__meta">
+            <span class="pill">150 объектов</span>
+            <span class="pill">Производство</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <img src="./assets/cases/case-6.jpg" alt="Kumiho" loading="lazy" />
+        </div>
+        <div class="case__body">
+          <h3 class="case__title">Kumiho</h3>
+          <p class="case__text">Создание и монтаж 500 бренд-зон: от концепции и производства до полевой реализации.</p>
+          <div class="case__meta">
+            <span class="pill">500 бренд-зон</span>
+            <span class="pill">Shop-in-shop</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =================== 9. ПРОИЗВОДСТВО =================== -->
+<section class="section" id="production">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Производство</h2>
+    </div>
+
+    <div class="grid grid--cards">
+      <article class="card">
+        <h3 class="card__title">Долгосрочные конструкции</h3>
+        <p class="card__text">Стеллажи, дисплеи, торговое оборудование для постоянного размещения.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Промо-решения</h3>
+        <p class="card__text">Временные POS-материалы, мобильные конструкции для акций и запусков.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Shop-in-shop</h3>
+        <p class="card__text">Брендированные зоны внутри торговых точек: проектирование и монтаж под ключ.</p>
+      </article>
+
+      <article class="card">
+        <h3 class="card__title">Инсталляции</h3>
+        <p class="card__text">Нестандартные брендовые инсталляции для максимального внимания покупателя.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- =================== 10. О КОМПАНИИ =================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Почему HEIGHT AGENCY</h2>
+    </div>
+
+    <div class="about__grid">
+      <div>
+        <p class="about__text">
+          HEIGHT AGENCY — агентство интегрированных коммуникаций с фокусом на полевых продажах
+          и операционном качестве в ритейле. Работаем без субподрядчиков: собственная федеральная
+          команда, полный цикл реализации, прозрачная аналитика на каждом шаге.
+        </p>
+        <p class="about__text" style="margin-top:14px">
+          KPI проектов выше 95%, федеральное покрытие, собственная команда реализации —
+          это не обещания, а измеримые результаты наших клиентов.
+        </p>
+      </div>
+
+      <ul class="about__list">
+        <li>Собственная федеральная команда без субподрядчиков</li>
+        <li>Полный цикл: от стратегии до полевой реализации</li>
+        <li>Прозрачная аналитика и онлайн-контроль KPI</li>
+        <li>Мерчандайзинг и трейд-маркетинг</li>
+        <li>Производство конструкций и POSM</li>
+        <li>Аутсорсинг полевых команд</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- =================== 11. ФИНАЛЬНЫЙ БЛОК =================== -->
+<section class="section cta-section" id="cta">
+  <div class="container">
+    <div class="cta-block">
+      <h2 class="h2">Обсудить задачу с аккаунт-командой</h2>
+      <p class="lead" style="max-width:44ch">
+        Расскажите о проекте — подберём решение и рассчитаем стоимость в течение одного дня.
+      </p>
+      <a class="btn btn--primary" id="tgCta" href="#" target="_blank" rel="noopener">
+        Написать в Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== 12. КОНТАКТЫ =================== -->
+<section class="section section--footer" id="contacts">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="h2">Контакты</h2>
+    </div>
+
+    <div class="contacts">
+      <a class="contact" id="phoneLink" href="#">
+        <span class="contact__label">Телефон</span>
+        <span class="contact__value" id="phoneText">+7 (000) 000-00-00</span>
+      </a>
+
+      <a class="contact" id="emailLink" href="#">
+        <span class="contact__label">Email</span>
+        <span class="contact__value" id="emailText">hello@height-agency.ru</span>
+      </a>
+
+      <a class="contact" id="tgLink" href="#" target="_blank" rel="noopener">
+        <span class="contact__label">Telegram</span>
+        <span class="contact__value" id="tgText">@heightagency</span>
+      </a>
+
+      <a class="contact" href="https://yandex.ru/maps/?text=Москва+Старая+Басманная+38" target="_blank" rel="noopener">
+        <span class="contact__label">Адрес</span>
+        <span class="contact__value">Москва, ул. Старая Басманная, 38</span>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <div class="footer__bottom">
+        <span class="muted">© <span id="year"></span> HEIGHT AGENCY</span>
+        <a class="to-top" href="#top">Наверх ↑</a>
+      </div>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<div class="copy-toast" id="copyToast">Скопировано</div>
+
+<script src="./js/app.js"></script>
 </body>
 </html>
