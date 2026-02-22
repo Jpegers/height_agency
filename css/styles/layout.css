@@ -108,13 +108,13 @@
 
 /* ----- Visual card (PNG + glow) ----- */
 .visual-card{
-  position:relative;
-  min-height:360px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  isolation:isolate;
-  overflow:hidden;
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  overflow: visible; /* важно: не обрезаем blur */
 }
 
 .visual-card__img{
