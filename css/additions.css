@@ -469,10 +469,6 @@
   justify-content: flex-start;
 }
 
-.grid--cards-5 .card:not(.card--featured) {
-  /* 4 cards fill 2 cols × 2 rows naturally */
-}
-
 .card--featured {
   background: linear-gradient(135deg, rgba(255,60,0,.08), rgba(255,138,0,.05)), rgba(255,255,255,.04);
   border-color: rgba(255,90,0,.2);
