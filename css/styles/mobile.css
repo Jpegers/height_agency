@@ -1,0 +1,377 @@
+/* ============================================================
+   MOBILE — фиксы и бургер-меню
+   ============================================================ */
+
+/* ===== BURGER BUTTON ===== */
+/* Hidden on desktop, shown via media query below */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background: rgba(255,255,255,.04);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .2s ease, opacity .2s ease;
+  transform-origin: center;
+}
+
+.burger.open .burger__line:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.burger.open .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .burger__line:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ===== MOBILE NAV DRAWER ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11,13,16,.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99;
+  padding: 24px 20px;
+  overflow-y: auto;
+  border-top: 1px solid var(--stroke);
+}
+
+.mobile-nav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav__link {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--stroke);
+  transition: color .15s;
+}
+
+.mobile-nav__link:hover {
+  color: var(--accent);
+}
+
+.mobile-nav__cta {
+  margin-top: 20px;
+}
+
+/* ===== SLIDER FIX — position-based instead of display:none ===== */
+.cases-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.cases-slide {
+  position: absolute;
+  inset: 0;
+  display: grid !important; /* always in DOM flow for height calc */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(30px);
+  transition: opacity .3s ease, transform .3s ease;
+  min-height: 80vh;
+}
+
+.cases-slide.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.cases-slide.slide-out-left {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-30px);
+  pointer-events: none;
+}
+
+.cases-slide.slide-out-right {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(30px);
+  pointer-events: none;
+}
+
+/* ===== TIMELINE FIX ===== */
+@media (max-width: 980px) {
+  .timeline {
+    padding-left: 0;
+    overflow: hidden;
+  }
+
+  .timeline__line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 56px;
+    gap: 16px;
+  }
+
+  .timeline-item__marker {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+}
+
+/* ===== HERO STATS MOBILE ===== */
+@media (max-width: 768px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .hero-stat {
+    padding: 14px 12px;
+    border-right: 1px solid var(--stroke);
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  /* Even items — no right border */
+  .hero-stat:nth-child(even) {
+    border-right: none;
+  }
+
+  /* Last two — no bottom border */
+  .hero-stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .hero-stat__sep { display: none }
+
+  .hero-stat__num {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .hero-stat__label {
+    font-size: 10px;
+  }
+}
+
+/* ===== CASES SLIDER MOBILE ===== */
+@media (max-width: 768px) {
+  .cases-slide {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto;
+    min-height: auto;
+  }
+
+  .cases-slide.active {
+    min-height: auto;
+  }
+
+  .cases-slide__info {
+    order: 1;
+    border-right: none !important;
+    border-bottom: 1px solid var(--stroke);
+    padding: 28px 20px;
+  }
+
+  .cases-slide__media {
+    order: 2;
+    min-height: 260px;
+  }
+
+  .cases-slide__main {
+    min-height: 280px;
+    max-height: 340px;
+  }
+
+  .cases-slide__thumbs {
+    height: 68px;
+  }
+
+  .cases-slide__count {
+    font-size: 20px;
+  }
+
+  .cases-slide__name {
+    font-size: 22px !important;
+  }
+
+  .cases-nav {
+    padding: 16px 20px 32px;
+  }
+
+  .cases-nav__btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ===== SERVICE ITEMS MOBILE ===== */
+@media (max-width: 768px) {
+  .service-item {
+    grid-template-columns: 48px 1fr;
+    gap: 0 16px;
+    padding: 20px 0;
+  }
+
+  .service-item__num {
+    font-size: 24px;
+  }
+
+  .service-item__tags {
+    display: none;
+  }
+}
+
+/* ===== GEO STATS MOBILE ===== */
+@media (max-width: 768px) {
+  .geo-big-stats {
+    grid-template-columns: 1fr 1fr;
+    border-radius: var(--radius);
+  }
+
+  .geo-big-stat {
+    padding: 24px 14px;
+    border-right: none !important;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  .geo-big-stat:nth-child(odd) {
+    border-right: 1px solid var(--stroke) !important;
+  }
+
+  .geo-big-stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  /* Prevent number from wrapping */
+  .geo-big-stat__num {
+    font-size: clamp(22px, 7vw, 36px) !important;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .geo-big-stat__label {
+    font-size: 10px;
+  }
+}
+
+/* ===== FOR WHOM GRID MOBILE ===== */
+@media (max-width: 480px) {
+  .for-whom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .for-whom-card {
+    border-right: none !important;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  .for-whom-card:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ===== PRODUCTION GRID MOBILE ===== */
+@media (max-width: 768px) {
+  .production-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prod-card--featured {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 180px;
+  }
+}
+
+/* ===== ABOUT LAYOUT MOBILE ===== */
+@media (max-width: 768px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ===== CONTACTS MOBILE ===== */
+@media (max-width: 768px) {
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== ANALYTICS MOBILE ===== */
+@media (max-width: 768px) {
+  .analytics-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ===== CTA MOBILE ===== */
+@media (max-width: 480px) {
+  .cta-block {
+    padding: 28px 18px;
+  }
+
+  .cta-block__inner .h2 {
+    font-size: 22px;
+  }
+}
+
+/* TG button — fit on small phones */
+@media (max-width: 980px) {
+  .header .btn.btn--tg {
+    font-size: 12px;
+    padding: 0 12px;
+    height: 36px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .header .brand__logo {
+    height: 26px;
+  }
+}
+
+/* ===== MOBILE SPACING + OVERFLOW FIX ===== */
+@media (max-width: 768px) {
+  .section { padding: 18px 0 }
+  .tasks-section { padding-top: 24px; padding-bottom: 24px }
+  .clients-section { padding-bottom: 20px }
+  .cta-section { padding: 24px 0 }
+  .section__head { margin-bottom: 10px }
+  .marquee-wrap { margin-top: 24px; overflow: hidden }
+
+  .h2 { font-size: clamp(22px, 6vw, 32px) }
+  .container { padding: 0 16px }
+}

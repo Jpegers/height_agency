@@ -5,11 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HEIGHT AGENCY Высота — Агентство интегрированных коммуникаций</title>
   <meta name="description" content="Рост продаж брендов в ритейле через системный трейд-маркетинг. Мерчандайзинг, трейд-маркетинг, производство POSM, полевые команды." />
+  <!-- SEO -->
+  <meta name="keywords" content="трейд-маркетинг, мерчандайзинг, POSM, полевые команды, аутсорсинг, ритейл, FMCG, аудит, аналитика продаж, HEIGHT AGENCY" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://height-agency.ru/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HEIGHT AGENCY Высота — Агентство интегрированных коммуникаций" />
+  <meta property="og:description" content="Рост продаж брендов в ритейле через системный трейд-маркетинг. Мерчандайзинг, трейд-маркетинг, производство POSM, полевые команды." />
+  <meta property="og:image" content="https://test.jpegers.art/svetlana/assets/og-preview.png" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:url" content="https://test.jpegers.art/svetlana/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HEIGHT AGENCY Высота — Агентство интегрированных коммуникаций" />
+  <meta name="twitter:description" content="Рост продаж брендов в ритейле через системный трейд-маркетинг." />
+  <meta name="twitter:image" content="https://test.jpegers.art/svetlana/assets/og-preview.png" />
+
+  <!-- Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="stylesheet" href="./css/additions.css" />
   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
 
   <link rel="icon" href="./assets/favicon.svg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HEIGHT AGENCY Высота",
+    "description": "Агентство интегрированных коммуникаций. Трейд-маркетинг, мерчандайзинг, производство POSM, полевые команды.",
+    "url": "https://height-agency.ru/",
+    "logo": "./assets/logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-926-940-55-98",
+      "email": "svetlana.kazakova@height-agency.ru",
+      "contactType": "sales",
+      "availableLanguage": "Russian"
+    },
+    "sameAs": ["https://t.me/SvetlankaKS"],
+    "areaServed": "RU",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "minValue": 7000
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -19,24 +66,25 @@
   <div class="container header__inner">
 
     <a class="brand" href="#top">
-      <img class="brand__logo" src="assets/logo.svg" alt="HEIGHT AGENCY Высота" />
+      <img class="brand__logo" src="./assets/logo.svg" alt="HEIGHT AGENCY Высота" />
     </a>
 
     <nav class="nav" aria-label="Навигация">
-      <a class="nav__link" href="#top">Главная</a>
-      <a class="nav__link" href="#about">О нас</a>
+      <a class="nav__link" href="#hero">Главная</a>
       <a class="nav__link" href="#services">Решения</a>
-      <a class="nav__link" href="#analytics">Контроль и аналитика</a>
+      <a class="nav__link" href="#analytics">Аналитика</a>
       <a class="nav__link" href="#cases">Кейсы</a>
+      <a class="nav__link" href="#about">О нас</a>
       <a class="nav__link" href="#contacts">Контакты</a>
     </nav>
 
     <a class="btn btn--tg" id="tgHeader" href="#" target="_blank" rel="noopener">
-      Перейти в Telegram
+      Перейти в&nbsp;Telegram
     </a>
 
   </div>
 </header>
+
 
 
 <main>
@@ -90,7 +138,7 @@
         <img
           class="visual-card__img parallax-object"
           src="./assets/hero.png"
-          alt=""
+          alt="HEIGHT AGENCY — системный трейд-маркетинг и рост продаж в ритейле"
           loading="eager"
           decoding="async"
         />
@@ -104,14 +152,14 @@
 <!-- =================== 2. ДЛЯ КОГО НАШИ РЕШЕНИЯ =================== -->
 <section class="section tasks-section" id="tasks">
   <div class="container">
-    <div class="section__head tasks-section__head">
+    <div class="section__head tasks-section__head reveal">
       <div>
         <h2 class="h2">Для кого наши решения</h2>
         <p class="tasks-lead">Мы помогаем брендам и ритейлу управлять продажами в торговых точках через системный трейд-маркетинг, полевые команды и цифровой контроль исполнения.</p>
       </div>
     </div>
 
-    <div class="tasks-cards tasks-cards--four">
+    <div class="tasks-cards tasks-cards--four reveal-stagger">
 
       <div class="task-card">
         <div class="task-card__icon">
@@ -148,7 +196,7 @@
     </div>
 
     <!-- Строка с результатами -->
-    <div class="tasks-results">
+    <div class="tasks-results reveal-stagger">
       <div class="tasks-result-item">
         <span class="tasks-result__num">+15–25%</span>
         <span class="tasks-result__label">рост продаж ключевых SKU</span>
@@ -174,7 +222,7 @@
 <!-- =================== 3. НАМ ДОВЕРЯЮТ =================== -->
 <section class="section clients-section" id="clients">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Нам доверяют</h2>
       <p class="muted section__head-sub">Работаем с крупнейшими брендами.</p>
     </div>
@@ -224,11 +272,11 @@
 <!-- =================== 4. РЕШЕНИЯ =================== -->
 <section class="section" id="services">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Решения</h2>
     </div>
 
-    <div class="grid grid--5-3-2">
+    <div class="grid grid--5-3-2 reveal-stagger">
       <article class="card">
         <h3 class="card__title">Аутсорсинг</h3>
         <p class="card__text">Эксклюзивный и совмещённый мерчандайзинг, консультанты, промоутеры, аутсорсинг персонала, представители ТМ, brand ambassador.</p>
@@ -261,11 +309,11 @@
 <!-- =================== 5. КАК МЫ РАБОТАЕМ =================== -->
 <section class="section" id="process">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Как мы работаем</h2>
     </div>
 
-    <ol class="steps steps--5">
+    <ol class="steps steps--5 reveal-stagger">
       <li class="step">
         <div class="step__num">01</div>
         <div class="step__content">
@@ -313,50 +361,73 @@
 <!-- =================== 6. КОНТРОЛЬ И АНАЛИТИКА =================== -->
 <section class="section" id="analytics">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Контроль и аналитика</h2>
     </div>
 
-    <div class="analytics-grid">
-      <div class="analytics-info">
-        <p class="about__text">
+    <div class="analytics-grid reveal">
+      <div class="analytics-panel">
+        <div class="analytics-panel__accent"></div>
+        <p class="analytics-panel__text">
           SFA-система, автоматизированное фото-распознавание, онлайн-дашборды и аналитика продаж
           позволяют отслеживать выполнение стандартов в режиме реального времени. Прозрачность KPI,
           снижение операционных рисков и рост эффективности полевых команд.
         </p>
       </div>
 
-      <div class="analytics-tools">
-        <div class="tool-item">
-          <span class="tool-item__icon">⬡</span>
+      <div class="analytics-tools reveal-stagger">
+        <div class="tool-item tool-item--v2">
+          <div class="tool-item__icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#toolGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
           <div>
             <strong>SFA-система</strong>
             <p>Контроль полевых команд и задач в одном окне</p>
           </div>
+          <span class="tool-item__num">01</span>
         </div>
-        <div class="tool-item">
-          <span class="tool-item__icon">⬡</span>
+        <div class="tool-item tool-item--v2">
+          <div class="tool-item__icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#toolGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
           <div>
             <strong>Фото-распознавание</strong>
             <p>Автоматическая проверка выкладки и стандартов</p>
           </div>
+          <span class="tool-item__num">02</span>
         </div>
-        <div class="tool-item">
-          <span class="tool-item__icon">⬡</span>
+        <div class="tool-item tool-item--v2">
+          <div class="tool-item__icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#toolGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 13l3-3 2 2 5-5"/></svg>
+          </div>
           <div>
             <strong>Онлайн-отчётность</strong>
             <p>Прозрачные KPI, доступные клиенту в любой момент</p>
           </div>
+          <span class="tool-item__num">03</span>
         </div>
-        <div class="tool-item">
-          <span class="tool-item__icon">⬡</span>
+        <div class="tool-item tool-item--v2">
+          <div class="tool-item__icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#toolGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
           <div>
             <strong>Аналитика продаж</strong>
             <p>Данные для принятия решений по ассортименту и полке</p>
           </div>
+          <span class="tool-item__num">04</span>
         </div>
       </div>
     </div>
+
+    <!-- SVG gradient definition for tool icons -->
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="toolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ff3c00"/>
+          <stop offset="100%" stop-color="#ff8a00"/>
+        </linearGradient>
+      </defs>
+    </svg>
   </div>
 </section>
 
@@ -364,7 +435,7 @@
 <!-- =================== 7. ГЕОГРАФИЯ =================== -->
 <section class="section" id="geography">
   <div class="container">
-    <div class="geo-banner">
+    <div class="geo-banner reveal">
       <div class="geo-stat">
         <span class="geo-stat__num">25 000+</span>
         <span class="geo-stat__label">торговых точек</span>
@@ -392,57 +463,66 @@
 <!-- =================== 8. КЕЙСЫ =================== -->
 <section class="section" id="cases">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Кейсы</h2>
     </div>
 
-    <div class="grid grid--cases-5">
+    <div class="grid grid--cases reveal-stagger">
 
       <article class="case">
-        <div class="case__media">
-          <img src="./assets/cases/case-1.jpg" alt="LAB Industries" loading="lazy" />
+        <div class="case__media case-slider" data-case-slider>
+          <img src="./assets/cases/lab-1.jpg" alt="Lab Industries" loading="lazy" class="case-slider__img active" />
+          <img src="./assets/cases/lab-2.jpg" alt="Lab Industries" loading="lazy" class="case-slider__img" />
+          <img src="./assets/cases/lab-3.jpg" alt="Lab Industries" loading="lazy" class="case-slider__img" />
+          <div class="case-slider__dots"></div>
         </div>
         <div class="case__body">
           <h3 class="case__title">LAB Industries</h3>
-          <p class="case__text">Покрытие по всей территории России, выполнение KPI&nbsp;&gt;98%.</p>
+          <p class="case__text">Покрытие по всей территории России, выполнение KPI >98%.</p>
           <div class="case__meta">
-            <span class="pill">KPI &gt;98%</span>
             <span class="pill">Мерчандайзинг</span>
           </div>
         </div>
       </article>
 
       <article class="case">
-        <div class="case__media">
-          <img src="./assets/cases/case-2.jpg" alt="Perfetti Van Melle" loading="lazy" />
+        <div class="case__media case-slider" data-case-slider>
+          <img src="./assets/cases/pvm-1.jpg" alt="Perfetti Van Melle" loading="lazy" class="case-slider__img active" />
+          <img src="./assets/cases/pvm-2.jpg" alt="Perfetti Van Melle" loading="lazy" class="case-slider__img" />
+          <img src="./assets/cases/pvm-3.jpg" alt="Perfetti Van Melle" loading="lazy" class="case-slider__img" />
+          <div class="case-slider__dots"></div>
         </div>
         <div class="case__body">
           <h3 class="case__title">Perfetti Van Melle</h3>
-          <p class="case__text">Совмещение двух механик, выполнение внеконтрактных условий, KPI&nbsp;&gt;95%.</p>
+          <p class="case__text">Совмещение двух механик, выполнение внеконтрактных условий, KPI >95%.</p>
           <div class="case__meta">
-            <span class="pill">KPI &gt;95%</span>
             <span class="pill">Ритейл-маркетинг</span>
           </div>
         </div>
       </article>
 
       <article class="case">
-        <div class="case__media">
-          <img src="./assets/cases/case-3.jpg" alt="Перспектива" loading="lazy" />
+        <div class="case__media case-slider" data-case-slider>
+          <img src="./assets/cases/case-1.jpg" alt="Перспектива" loading="lazy" class="case-slider__img active" />
+          <img src="./assets/cases/case-2.jpg" alt="Перспектива" loading="lazy" class="case-slider__img" />
+          <img src="./assets/cases/case-3.jpg" alt="Перспектива" loading="lazy" class="case-slider__img" />
+          <div class="case-slider__dots"></div>
         </div>
         <div class="case__body">
           <h3 class="case__title">Перспектива</h3>
-          <p class="case__text">Покрытие 98%, выполнение поставленных KPI&nbsp;&gt;97%.</p>
+          <p class="case__text">Покрытие 98%, выполнение поставленных KPI >97%.</p>
           <div class="case__meta">
-            <span class="pill">KPI &gt;97%</span>
             <span class="pill">Аутсорсинг</span>
           </div>
         </div>
       </article>
 
       <article class="case">
-        <div class="case__media">
-          <img src="./assets/cases/case-1.jpg" alt="Алкогольная Сибирская Группа" loading="lazy" />
+        <div class="case__media case-slider" data-case-slider>
+          <img src="./assets/cases/asg-1.jpg" alt="АСГ" loading="lazy" class="case-slider__img active" />
+          <img src="./assets/cases/asg-2.jpg" alt="АСГ" loading="lazy" class="case-slider__img" />
+          <img src="./assets/cases/asg-3.jpg" alt="АСГ" loading="lazy" class="case-slider__img" />
+          <div class="case-slider__dots"></div>
         </div>
         <div class="case__body">
           <h3 class="case__title">Алкогольная Сибирская Группа</h3>
@@ -455,16 +535,32 @@
       </article>
 
       <article class="case">
-        <div class="case__media">
-          <img src="./assets/cases/case-2.jpg" alt="FitnesSHOCK" loading="lazy" />
+        <div class="case__media case-slider" data-case-slider>
+          <img src="./assets/cases/fitnes-1.jpg" alt="Фитнес Шок" loading="lazy" class="case-slider__img active" />
+          <img src="./assets/cases/fitnes-2.jpg" alt="Фитнес Шок" loading="lazy" class="case-slider__img" />
+          <img src="./assets/cases/fitnes-3.jpg" alt="Фитнес Шок" loading="lazy" class="case-slider__img" />
+          <div class="case-slider__dots"></div>
         </div>
         <div class="case__body">
-          <h3 class="case__title">FitnesSHOCK</h3>
-          <p class="case__text">Оперативный запуск проекта, покрытие по всей территории России, выполнение KPI&nbsp;&gt;98%, блиц-проекты.</p>
+          <h3 class="case__title">Фитнес Шок</h3>
+          <p class="case__text">Оперативный запуск проекта, покрытие по всей территории России, выполнение KPI >98%, блиц-проекты.</p>
           <div class="case__meta">
-            <span class="pill">KPI &gt;98%</span>
+            <span class="pill">KPI >98%</span>
             <span class="pill">Федеральное покрытие</span>
           </div>
+        </div>
+      </article>
+
+      <article class="case case--cta">
+        <div class="case__media case--cta-media">
+          <span class="case--cta-icon">+</span>
+        </div>
+        <div class="case__body case--cta-body">
+          <h3 class="case__title">Ваша компания</h3>
+          <p class="case__text case--cta-text">Расскажите о задаче — подготовим стратегию и покажем, каких результатов можно достичь.</p>
+          <a class="btn btn--primary btn--sm" id="tgCase" href="#" target="_blank" rel="noopener">
+            Обсудить проект
+          </a>
         </div>
       </article>
 
@@ -476,11 +572,11 @@
 <!-- =================== 9. ПРОИЗВОДСТВО =================== -->
 <section class="section" id="production">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Производство</h2>
     </div>
 
-    <div class="grid grid--5-2-3">
+    <div class="grid grid--5-2-3 reveal-stagger">
       <article class="card">
         <h3 class="card__title">Креатив и дизайн</h3>
         <p class="card__text">Разработка концепций и макетов POSM-материалов. Полный цикл от идеи до готового макета с учётом стандартов сети.</p>
@@ -513,11 +609,11 @@
 <!-- =================== 10. ЦИФРЫ И РЕЗУЛЬТАТЫ =================== -->
 <section class="section" id="results">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Цифры и результаты</h2>
     </div>
 
-    <div class="geo-banner">
+    <div class="geo-banner reveal">
       <div class="geo-stat">
         <span class="geo-stat__num">ПРЯМОЕ</span>
         <span class="geo-stat__label">производство без посредников</span>
@@ -545,11 +641,11 @@
 <!-- =================== 11. О КОМПАНИИ =================== -->
 <section class="section" id="about">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Почему HEIGHT AGENCY</h2>
     </div>
 
-    <div class="about__grid">
+    <div class="about__grid reveal">
       <div>
         <p class="about__text">
           HEIGHT AGENCY Высота — агентство интегрированных коммуникаций с фокусом на полевых продажах
@@ -579,7 +675,7 @@
 <!-- =================== 11. ФИНАЛЬНЫЙ БЛОК =================== -->
 <section class="section cta-section" id="cta">
   <div class="container">
-    <div class="cta-block">
+    <div class="cta-block reveal">
       <h2 class="h2">Обсудить задачу с аккаунт-командой</h2>
       <p class="lead" style="max-width:44ch">
         Расскажите о проекте — подберём решение и рассчитаем стоимость в течение одного дня.
@@ -594,24 +690,24 @@
 <!-- =================== 12. КОНТАКТЫ =================== -->
 <section class="section section--footer" id="contacts">
   <div class="container">
-    <div class="section__head">
+    <div class="section__head reveal">
       <h2 class="h2">Контакты</h2>
     </div>
 
-    <div class="contacts">
+    <div class="contacts reveal-stagger">
       <a class="contact" id="phoneLink" href="#">
         <span class="contact__label">Телефон</span>
-        <span class="contact__value" id="phoneText">+7 (000) 000-00-00</span>
+        <span class="contact__value" id="phoneText">+7 (926) 940-55-98</span>
       </a>
 
       <a class="contact" id="emailLink" href="#">
         <span class="contact__label">Email</span>
-        <span class="contact__value" id="emailText">hello@height-agency.ru</span>
+        <span class="contact__value" id="emailText">svetlana.kazakova@height-agency.ru</span>
       </a>
 
       <a class="contact" id="tgLink" href="#" target="_blank" rel="noopener">
         <span class="contact__label">Telegram</span>
-        <span class="contact__value" id="tgText">@heightagency</span>
+        <span class="contact__value" id="tgText">@SvetlankaKS</span>
       </a>
 
 
@@ -621,7 +717,6 @@
       <div class="footer__line"></div>
       <div class="footer__bottom">
         <span class="muted">© <span id="year"></span> HEIGHT AGENCY Высота</span>
-        <a class="to-top" href="#top">Наверх ↑</a>
       </div>
     </footer>
   </div>
@@ -629,7 +724,6 @@
 
 </main>
 
-<div class="copy-toast" id="copyToast">Скопировано</div>
 
 <script src="./js/app.js"></script>
 </body>

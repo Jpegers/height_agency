@@ -317,12 +317,21 @@
   .visual-card__glow{display:none}
 
   .hero__content{width:100%}
+
+  /* Sections — tighter on mobile */
+  .section{padding:24px 0}
+  .section__head{margin-bottom:12px}
 }
 
-@media (max-width:360px){
+@media (max-width:420px){
+  /* Hero buttons — full width stacked */
   .hero__actions{
     flex-direction:column;
     align-items:stretch;
   }
-  .hero__actions .btn{width:100%}
+  .hero__actions .btn{
+    width:100%;
+    justify-content:center;
+  }
+
 }

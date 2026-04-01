@@ -30,7 +30,8 @@
 /* ===== СБРОС ===== */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-html,body{overflow-x:hidden}
+section[id]{scroll-margin-top:80px}
+body{overflow-x:hidden}
 img{max-width:100%;display:block}
 
 

@@ -11,7 +11,7 @@
   gap:10px;
   height:44px;
   padding:0 16px;
-  border-radius:14px;
+  border-radius:999px;
   border:1px solid var(--stroke);
   text-decoration:none;
   color:var(--text);
@@ -187,4 +187,483 @@
 .copy-toast--show{
   opacity:1;
   transform:translateX(-50%) translateY(0);
+}
+
+/* ===== CASE PHOTO SLIDER ===== */
+.case-slider {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* все картинки абсолютно — контейнер держит высоту через aspect-ratio */
+.case-slider__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.case-slider__img.active {
+  opacity: 1;
+}
+.case-slider__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+  z-index: 2;
+}
+.case-slider__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+.case-slider__dot.active {
+  background: #fff;
+  transform: scale(1.3);
+}
+
+/* ===== CASE LIST ===== */
+.case__list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.case__list li {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  padding-left: 14px;
+  position: relative;
+}
+.case__list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--g2);
+}
+
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger children inside grids */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .5s cubic-bezier(.16,1,.3,1), transform .5s cubic-bezier(.16,1,.3,1);
+}
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: .08s }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: .16s }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: .20s }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: .24s }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: .28s }
+
+/* ===== HOVER GLOW — cards, steps, contacts ===== */
+.card,
+.step,
+.contact,
+.tool-item {
+  transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.card:hover,
+.step:hover,
+.tool-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,90,0,.2);
+  background: rgba(255,60,0,.04);
+  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.nav__link--active {
+  color: #fff;
+  background: none;
+  position: relative;
+}
+.nav__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+}
+
+/* ===== HEADER COMPACT ON SCROLL ===== */
+.header--scrolled .header__inner {
+  height: 56px;
+}
+.header--scrolled .brand__logo {
+  height: clamp(22px, 3.2vw, 34px);
+}
+
+
+/* ===== ANALYTICS PANEL (v2) ===== */
+.analytics-panel {
+  position: relative;
+  padding: 28px 28px 28px 32px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.analytics-panel__accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--g1), var(--g2));
+  border-radius: 0 2px 2px 0;
+}
+
+.analytics-panel__text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 15px;
+  flex: 1;
+}
+
+.analytics-panel__stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.analytics-ministat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.analytics-ministat__num {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--g1), var(--g2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+}
+
+.analytics-ministat__label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===== TOOL ITEM V2 ===== */
+.tool-item--v2 {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.025);
+  transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.tool-item--v2:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,90,0,.22);
+  background: rgba(255,60,0,.04);
+  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+}
+
+.tool-item__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,60,0,.06);
+  border: 1px solid rgba(255,90,0,.12);
+  flex-shrink: 0;
+  transition: background .25s ease, box-shadow .25s ease;
+}
+
+.tool-item--v2:hover .tool-item__icon-wrap {
+  background: rgba(255,60,0,.10);
+  box-shadow: 0 0 20px rgba(255,60,0,.15);
+}
+
+.tool-item__num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.12);
+  transition: color .25s ease;
+}
+
+.tool-item--v2:hover .tool-item__num {
+  color: rgba(255,90,0,.3);
+}
+
+.tool-item--v2 strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.tool-item--v2 p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+
+/* ===== BTN PRIMARY HOVER GLOW ===== */
+.btn--primary {
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn--primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(255,60,0,.35), 0 0 60px rgba(255,90,0,.15);
+}
+.btn--tg {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn--tg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255,60,0,.25);
+}
+
+
+/* ===== HEADER SMOOTH TRANSITION ===== */
+.header__inner {
+  transition: height .25s ease;
+}
+.brand__logo {
+  transition: height .25s ease;
+}
+
+
+/* ===== CASE hover ===== */
+.case {
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.case:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,90,0,.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,.3), 0 0 30px rgba(255,60,0,.06);
+}
+
+/* ===== PILL hover ===== */
+.pill {
+  transition: border-color .2s ease, background .2s ease;
+}
+.pill:hover {
+  border-color: rgba(255,90,0,.25);
+  background: rgba(255,60,0,.08);
+}
+
+/* ===== CONTACT hover glow (consistent) ===== */
+.contact:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,90,0,.2);
+  background: rgba(255,60,0,.04);
+  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+}
+
+/* ===== GEO BANNER hover on stats ===== */
+.geo-stat {
+  transition: transform .2s ease;
+}
+.geo-stat:hover {
+  transform: scale(1.05);
+}
+
+/* ===== TASKS RESULTS spacing ===== */
+.tasks-results {
+  margin-top: 20px;
+}
+
+
+/* ===== CASE CTA (6th card) ===== */
+.case--cta {
+  border: 1px dashed rgba(255,90,0,.25);
+  background: linear-gradient(135deg, rgba(255,60,0,.04), rgba(255,138,0,.02)), rgba(255,255,255,.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.case--cta:hover {
+  border-color: rgba(255,90,0,.4);
+  border-style: solid;
+  background: linear-gradient(135deg, rgba(255,60,0,.07), rgba(255,138,0,.04)), rgba(255,255,255,.03);
+}
+
+.case--cta-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,60,0,.03);
+}
+
+.case--cta-icon {
+  font-size: 48px;
+  font-weight: 300;
+  background: linear-gradient(135deg, var(--g1), var(--g2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: .5;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.case--cta:hover .case--cta-icon {
+  opacity: .8;
+  transform: scale(1.1);
+}
+
+.case--cta-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.case--cta-text {
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.btn--sm {
+  height: 38px;
+  padding: 0 20px;
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+
+/* ===== CONTACTS: 3 columns instead of 4 ===== */
+.contacts {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== STEPS 5: medium screen 3+2 ===== */
+@media (min-width: 601px) and (max-width: 1100px) {
+  .steps--5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== MOBILE: analytics v2 panel ===== */
+@media (max-width: 980px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== ANALYTICS MOBILE ===== */
+@media (max-width: 768px) {
+  .analytics-panel {
+    padding: 20px 20px 20px 24px;
+  }
+  .analytics-panel__stats {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 980px) {
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== MOBILE POLISH (≤420px) ===== */
+@media (max-width: 420px) {
+  /* Lead text — tighter */
+  .lead {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* H1 — prevent awkward wraps */
+  .h1 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .h2 {
+    font-size: 20px;
+  }
+
+  /* Hero stats — tighter in grid */
+  .hero-stat__num {
+    font-size: 18px;
+  }
+
+  .hero-stat__label {
+    font-size: 10px;
+  }
+
+  /* Geo banner stats tighter */
+  .geo-stat__num {
+    font-size: 20px !important;
+  }
+  .geo-stat__label {
+    font-size: 11px;
+  }
+
+  /* Tasks results */
+  .tasks-result__num {
+    font-size: 16px;
+  }
+  .tasks-result__label {
+    font-size: 10px;
+  }
+
+  /* CTA block */
+  .cta-block {
+    padding: 28px 16px;
+  }
+  .cta-block .btn {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
 }
