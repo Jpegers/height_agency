@@ -29,14 +29,14 @@
 .btn--primary{
   border:0;
   background:linear-gradient(90deg,var(--g1),var(--g2));
-  box-shadow:0 12px 32px rgba(255,90,0,.25);
+  box-shadow:0 12px 32px rgba(240,30,30,.25);
 }
 
 .btn--ghost{background:transparent}
 
 .btn--tg{
   border:0;
-  background:linear-gradient(90deg,rgba(255,60,0,.85),rgba(255,138,0,.85));
+  background:linear-gradient(90deg,rgba(240,0,1,.85),rgba(255,48,56,.85));
 }
 
 @media (max-width:980px){
@@ -295,9 +295,9 @@
 .step:hover,
 .tool-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(255,90,0,.2);
-  background: rgba(255,60,0,.04);
-  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+  border-color: rgba(240,30,30,.2);
+  background: rgba(240,0,1,.04);
+  box-shadow: 0 8px 32px rgba(240,0,1,.08);
 }
 
 /* ===== ACTIVE NAV LINK ===== */
@@ -402,9 +402,9 @@
 
 .tool-item--v2:hover {
   transform: translateY(-2px);
-  border-color: rgba(255,90,0,.22);
-  background: rgba(255,60,0,.04);
-  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+  border-color: rgba(240,30,30,.22);
+  background: rgba(240,0,1,.04);
+  box-shadow: 0 8px 32px rgba(240,0,1,.08);
 }
 
 .tool-item__icon-wrap {
@@ -414,15 +414,15 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(255,60,0,.06);
-  border: 1px solid rgba(255,90,0,.12);
+  background: rgba(240,0,1,.06);
+  border: 1px solid rgba(240,30,30,.12);
   flex-shrink: 0;
   transition: background .25s ease, box-shadow .25s ease;
 }
 
 .tool-item--v2:hover .tool-item__icon-wrap {
-  background: rgba(255,60,0,.10);
-  box-shadow: 0 0 20px rgba(255,60,0,.15);
+  background: rgba(240,0,1,.10);
+  box-shadow: 0 0 20px rgba(240,0,1,.15);
 }
 
 .tool-item__num {
@@ -437,7 +437,7 @@
 }
 
 .tool-item--v2:hover .tool-item__num {
-  color: rgba(255,90,0,.3);
+  color: rgba(240,30,30,.3);
 }
 
 .tool-item--v2 strong {
@@ -461,14 +461,14 @@
 }
 .btn--primary:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 16px 40px rgba(255,60,0,.35), 0 0 60px rgba(255,90,0,.15);
+  box-shadow: 0 16px 40px rgba(240,0,1,.35), 0 0 60px rgba(240,30,30,.15);
 }
 .btn--tg {
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .btn--tg:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(255,60,0,.25);
+  box-shadow: 0 10px 28px rgba(240,0,1,.25);
 }
 
 
@@ -487,8 +487,8 @@
 }
 .case:hover {
   transform: translateY(-3px);
-  border-color: rgba(255,90,0,.18);
-  box-shadow: 0 12px 40px rgba(0,0,0,.3), 0 0 30px rgba(255,60,0,.06);
+  border-color: rgba(240,30,30,.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,.3), 0 0 30px rgba(240,0,1,.06);
 }
 
 /* ===== PILL hover ===== */
@@ -496,16 +496,16 @@
   transition: border-color .2s ease, background .2s ease;
 }
 .pill:hover {
-  border-color: rgba(255,90,0,.25);
-  background: rgba(255,60,0,.08);
+  border-color: rgba(240,30,30,.25);
+  background: rgba(240,0,1,.08);
 }
 
 /* ===== CONTACT hover glow (consistent) ===== */
 .contact:hover {
   transform: translateY(-2px);
-  border-color: rgba(255,90,0,.2);
-  background: rgba(255,60,0,.04);
-  box-shadow: 0 8px 32px rgba(255,60,0,.08);
+  border-color: rgba(240,30,30,.2);
+  background: rgba(240,0,1,.04);
+  box-shadow: 0 8px 32px rgba(240,0,1,.08);
 }
 
 /* ===== GEO BANNER hover on stats ===== */
@@ -524,23 +524,23 @@
 
 /* ===== CASE CTA (6th card) ===== */
 .case--cta {
-  border: 1px dashed rgba(255,90,0,.25);
-  background: linear-gradient(135deg, rgba(255,60,0,.04), rgba(255,138,0,.02)), rgba(255,255,255,.02);
+  border: 1px dashed rgba(240,30,30,.25);
+  background: linear-gradient(135deg, rgba(240,0,1,.04), rgba(255,48,56,.02)), rgba(255,255,255,.02);
   display: flex;
   flex-direction: column;
 }
 
 .case--cta:hover {
-  border-color: rgba(255,90,0,.4);
+  border-color: rgba(240,30,30,.4);
   border-style: solid;
-  background: linear-gradient(135deg, rgba(255,60,0,.07), rgba(255,138,0,.04)), rgba(255,255,255,.03);
+  background: linear-gradient(135deg, rgba(240,0,1,.07), rgba(255,48,56,.04)), rgba(255,255,255,.03);
 }
 
 .case--cta-media {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,60,0,.03);
+  background: rgba(240,0,1,.03);
 }
 
 .case--cta-icon {

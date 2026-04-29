@@ -44,10 +44,10 @@ function setText(id, value) {
   setLink("tgLink", CONFIG.telegram);
   setText("tgText", CONFIG.telegramText);
 
-  setLink("phoneLink", "#");
+  setLink("phoneLink", "tel:" + CONFIG.phoneTel);
   setText("phoneText", CONFIG.phoneDisplay);
 
-  setLink("emailLink", "#");
+  setLink("emailLink", "mailto:" + CONFIG.email);
   setText("emailText", CONFIG.email);
 
   const y = document.getElementById("year");
@@ -90,13 +90,14 @@ function setText(id, value) {
     }
   }
 
-  phone?.addEventListener("click",(e)=>{
-    e.preventDefault();
+  // Клик НЕ блокируем — нативный tel:/mailto: пусть срабатывает (браузер откроет почту,
+  // предложит позвонить через Skype/etc). Параллельно копируем в буфер с тостом —
+  // если у юзера нет handler-а, хотя бы есть адрес/номер в буфере.
+  phone?.addEventListener("click",()=>{
     copy(CONFIG.phoneDisplay);
   });
 
-  email?.addEventListener("click",(e)=>{
-    e.preventDefault();
+  email?.addEventListener("click",()=>{
     copy(CONFIG.email);
   });
 

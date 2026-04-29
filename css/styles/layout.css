@@ -9,14 +9,14 @@
   top:0;
   z-index:50;
   backdrop-filter:blur(10px);
-  background:rgba(11,13,16,.72);
+  background:rgba(27,31,34,.72);
   border-bottom:1px solid var(--stroke);
   transition:height .22s ease, backdrop-filter .22s ease, background .22s ease;
 }
 
 .header--scrolled{
   backdrop-filter:blur(14px);
-  background:rgba(11,13,16,.86);
+  background:rgba(27,31,34,.86);
 }
 
 .header__inner{
@@ -41,7 +41,7 @@
 
 .brand:focus-visible{
   outline:none;
-  box-shadow:0 0 0 2px rgba(255,120,0,.4);
+  box-shadow:0 0 0 2px rgba(240,30,30,.4);
   border-radius:12px;
 }
 
@@ -133,8 +133,8 @@
   height:420px;
   background:
     radial-gradient(circle,
-      rgba(255,90,0,.22) 0%,
-      rgba(255,90,0,.12) 35%,
+      rgba(240,30,30,.22) 0%,
+      rgba(240,30,30,.12) 35%,
       transparent 70%);
   filter:blur(40px);
   z-index:1;

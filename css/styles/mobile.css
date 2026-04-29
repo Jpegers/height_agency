@@ -49,7 +49,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(11,13,16,.97);
+  background: rgba(27,31,34,.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 99;
