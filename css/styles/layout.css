@@ -160,7 +160,7 @@
 /* ===== ГРИДЫ ===== */
 .grid{display:grid;gap:14px}
 .grid--cards{grid-template-columns:repeat(4,1fr)}
-.grid--cases{grid-template-columns:repeat(3,1fr)}
+.grid--cases{grid-template-columns:repeat(4,1fr)}
 
 
 /* ===== ABOUT ===== */
@@ -219,6 +219,10 @@
    RESPONSIVE — LAYOUT
    ============================================================ */
 
+@media (max-width:1200px){
+  .grid--cases{grid-template-columns:repeat(3,1fr)}
+}
+
 @media (max-width:980px){
 
   /* Header */
@@ -276,7 +280,7 @@
 
   /* Grids */
   .grid--cards{grid-template-columns:repeat(2,1fr)}
-  .grid--cases{grid-template-columns:1fr}
+  .grid--cases{grid-template-columns:repeat(2,1fr)}
 
   /* About & Contacts */
   .about__grid{grid-template-columns:1fr}
@@ -321,6 +325,9 @@
   /* Sections — tighter on mobile */
   .section{padding:24px 0}
   .section__head{margin-bottom:12px}
+
+  /* Grids */
+  .grid--cases{grid-template-columns:1fr}
 }
 
 @media (max-width:420px){
